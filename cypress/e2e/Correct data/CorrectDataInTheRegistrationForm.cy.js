@@ -58,3 +58,24 @@
         .should('contain.text', "Your account was created successfully.")
     })
   });
+
+
+describe ('Enter the correct data in the registration form with the city, using the names of the city with a dot and a space', () => {
+  it ('ID 1.4', () => {
+    cy.visit ('https://parabank.parasoft.com/parabank/index.htm').wait (1000);
+    cy.get ('[href^="register.htm"]').click ().wait (1000);
+    validData.typeFirstName ('David');
+    validData.typeLastName ('Smith');
+    validData.typeAdress ('24486 Yukon Rd');
+    validData.typeCity ('St. Louis');
+    validData.typeState ('Missouri');
+    validData.typeZipCode ('12345-6790');
+    validData.typePhone ('+18293816409');
+    validData.typeSSN ('188-05-1120');
+    validData.typeUserNameAndPassword ('Lion', '84cAks%LpjbC', '84cAks%LpjbC');
+    cy.get ('input[value="Register"]').click ();
+    cy
+      .get ('.title ~ p')
+      .should ('contain.text', 'Your account was created successfully.');
+  });
+});
