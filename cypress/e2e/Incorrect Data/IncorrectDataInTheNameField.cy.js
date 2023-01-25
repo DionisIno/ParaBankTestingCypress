@@ -2,191 +2,191 @@
   import { validData } from "../../support/pages/validData";
 
 
-  describe('Empty First Name in the registration form', () => {
-    it.skip('ID 2.1', () => {
+  describe('Empty Last Name in the registration form', () => {
+    it('ID 3.1', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
-      validData.typeLastName("Brown")
+      validData.typeFirstName("Denis")
       validData.typeAdress("4454 Feathers Hooves Drive")
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
-      validData.typeZipCode("12345-6789")
-      validData.typePhone("+18293816408")
-      validData.typeSSN("078-05-1120")
-      validData.typeUserNameAndPassword("Qwerty1", "CZ40${8", "CZ40${8")
+      validData.typeZipCode("12345")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
+      validData.typeUserNameAndPassword("Spider1", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
-      cy.get('span.error')
-        .should('contain.text', "First name is required.")
+      cy.get('span[id="customer.lastName.errors"]')
+        .should('contain.text', "Last name is required.")
     })
   });
 
-  describe('A space was entered in the Name field in the registration form', () => {
-    it.skip('ID 2.2', () => {
+  describe('A space was entered in the Last Name field in the registration form', () => {
+    it('ID 3.2', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
-      validData.typeFirstName(" ")
-      validData.typeLastName("Brown")
+      validData.typeFirstName("Denis")
+      validData.typeLastName(" ")
       validData.typeAdress("4454 Feathers Hooves Drive")
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
-      validData.typeZipCode("12345-6789")
-      validData.typePhone("+18293816408")
-      validData.typeSSN("078-05-1120")
-      validData.typeUserNameAndPassword("Qwerty2", "CZ40${8", "CZ40${8")
+      validData.typeZipCode("12345")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
+      validData.typeUserNameAndPassword("Spider2", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
-      cy.get('p.error')
+      cy.get('span[id="customer.lastName.errors"]')
         .should('contain.text', "An internal error has occurred and has been logged.")
     })
   });
 
-  describe('In the registration form in the field Name entered the word with a space in front', () => {
-    it.skip('ID 2.3', () => {
+  describe('In the Last Name registration form, enter a word with a space in front ', () => {
+    it('ID 3.3', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
-      validData.typeFirstName(" Denis")
-      validData.typeLastName("Brown")
+      validData.typeFirstName("Denis")
+      validData.typeLastName(" Brown")
       validData.typeAdress("4454 Feathers Hooves Drive")
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
-      validData.typeZipCode("12345-6789")
-      validData.typePhone("+18293816408")
-      validData.typeSSN("078-05-1120")
-      validData.typeUserNameAndPassword("Qwerty3", "CZ40${8", "CZ40${8")
+      validData.typeZipCode("12345")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
+      validData.typeUserNameAndPassword("Spider3", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
-      cy.get('p.error')
+      cy.get('span[id="customer.lastName.errors"]')
         .should('contain.text', "An internal error has occurred and has been logged.")
     })
   });
 
-  describe('In the registration form in the field Name entered the word with a space in the middle', () => {
-    it.skip('ID 2.4', () => {
+  describe('In the Last Name registration form, enter a word with a space in the middle', () => {
+    it('ID 3.4', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
-      validData.typeFirstName("De nis")
-      validData.typeLastName("Brown")
+      validData.typeFirstName("Denis")
+      validData.typeLastName("Sm ith")
       validData.typeAdress("4454 Feathers Hooves Drive")
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
-      validData.typeZipCode("12345-6789")
-      validData.typePhone("+18293816408")
-      validData.typeSSN("078-05-1120")
-      validData.typeUserNameAndPassword("Qwerty4", "CZ40${8", "CZ40${8")
+      validData.typeZipCode("12345")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
+      validData.typeUserNameAndPassword("Spider4", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
-      cy.get('p.error')
+      cy.get('span[id="customer.lastName.errors"]')
         .should('contain.text', "An internal error has occurred and has been logged.")
     })
   });
 
-  describe('In the registration form in the field Name entered the word with a space in the end', () => {
-    it.skip('ID 2.5', () => {
+  describe('In the Last Name registration form, enter a word with a space in the end', () => {
+    it('ID 3.5', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
-      validData.typeFirstName("Denis  ")
-      validData.typeLastName("Brown")
+      validData.typeFirstName("Denis")
+      validData.typeLastName("Brown  ")
       validData.typeAdress("4454 Feathers Hooves Drive")
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
-      validData.typeZipCode("12345-6789")
-      validData.typePhone("+18293816408")
-      validData.typeSSN("078-05-1120")
-      validData.typeUserNameAndPassword("Qwerty5", "CZ40${8", "CZ40${8")
+      validData.typeZipCode("12345")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
+      validData.typeUserNameAndPassword("Spider5", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
-      cy.get('p.error')
+      cy.get('span[id="customer.lastName.errors"]')
         .should('contain.text', "An internal error has occurred and has been logged.")
     })
   });
 
-  describe('In the registration form, the numbers are entered in the Name field', () => {
-    it.skip('ID 2.6', () => {
+  describe('In the Last Name registration form, enter the numbers', () => {
+    it('ID 3.6', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
-      validData.typeFirstName("1234890")
-      validData.typeLastName("Brown")
+      validData.typeFirstName("Denis")
+      validData.typeLastName("1234891")
       validData.typeAdress("4454 Feathers Hooves Drive")
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
-      validData.typeZipCode("12345-6789")
-      validData.typePhone("+18293816408")
-      validData.typeSSN("078-05-1120")
-      validData.typeUserNameAndPassword("Qwerty6", "CZ40${8", "CZ40${8")
+      validData.typeZipCode("12345")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
+      validData.typeUserNameAndPassword("Spider6", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
-      cy.get('p.error')
+      cy.get('span[id="customer.lastName.errors"]')
         .should('contain.text', "An internal error has occurred and has been logged.")
     })
   });
 
-  describe('In the registration form, the special characters are entered in the Name field', () => {
-    it.skip('ID 2.7', () => {
+  describe('In the Last Name registration form, enter the special characters', () => {
+    it('ID 3.7', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
-      validData.typeFirstName("<&^):}~?")
-      validData.typeLastName("Brown")
+      validData.typeFirstName("Denis")
+      validData.typeLastName("<&^):(}~?")
       validData.typeAdress("4454 Feathers Hooves Drive")
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
-      validData.typeZipCode("12345-6789")
-      validData.typePhone("+18293816408")
-      validData.typeSSN("078-05-1120")
-      validData.typeUserNameAndPassword("Qwerty7", "CZ40${8", "CZ40${8")
+      validData.typeZipCode("12345")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
+      validData.typeUserNameAndPassword("Spider7", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
-      cy.get('p.error')
+      cy.get('span[id="customer.lastName.errors"]')
         .should('contain.text', "An internal error has occurred and has been logged.")
     })
   });
 
-  describe('In the registration form, non-ASCII characters are entered in the Name field', () => {
-    it.skip('ID 2.8', () => {
+  describe('In the registration form, non-ASCII characters are entered in the Last Name field', () => {
+    it('ID 3.8', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
-      validData.typeFirstName("♣☺♂")
-      validData.typeLastName("Brown")
+      validData.typeFirstName("Denis")
+      validData.typeLastName("♣☺♂")
       validData.typeAdress("4454 Feathers Hooves Drive")
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
-      validData.typeZipCode("12345-6789")
-      validData.typePhone("+18293816408")
-      validData.typeSSN("078-05-1120")
-      validData.typeUserNameAndPassword("Qwerty8", "CZ40${8", "CZ40${8")
+      validData.typeZipCode("12345")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
+      validData.typeUserNameAndPassword("Spider8", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
-      cy.get('p.error')
+      cy.get('span[id="customer.lastName.errors"]')
         .should('contain.text', "An internal error has occurred and has been logged.")
     })
   });
 
-  describe('In the registration form, in the Name field, symbols, numbers, letters and a space are entered', () => {
-    it.skip('ID 2.9', () => {
+  describe('In the registration form, in the Last Name field, symbols, numbers, letters and a space are entered', () => {
+    it('ID 3.9', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
-      validData.typeFirstName(" 1.5-3!rt(>&'Q~c")
-      validData.typeLastName("Brown")
+      validData.typeFirstName("Denis")
+      validData.typeLastName(" 1.5-3!rt(>&'Q~d")
       validData.typeAdress("4454 Feathers Hooves Drive")
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
-      validData.typeZipCode("12345-6789")
-      validData.typePhone("+18293816408")
-      validData.typeSSN("078-05-1120")
-      validData.typeUserNameAndPassword("Qwerty9", "CZ40${8", "CZ40${8")
+      validData.typeZipCode("12345")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
+      validData.typeUserNameAndPassword("Spider9", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
-      cy.get('p.error')
+      cy.get('span[id="customer.lastName.errors"]')
         .should('contain.text', "An internal error has occurred and has been logged.")
     })
   });
 
-  describe('In the registration form, in the Name field, symbols, numbers, letters and a space are entered', () => {
-    it.skip('ID 2.10', () => {
+  describe('In the registration form in the field Last Name entered the word in Cyrillic', () => {
+    it('ID 2.10', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
-      validData.typeFirstName("Денис")
-      validData.typeLastName("Brown")
+      validData.typeFirstName("Denis")
+      validData.typeLastName("Смит")
       validData.typeAdress("4454 Feathers Hooves Drive")
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
-      validData.typeZipCode("12345-6789")
-      validData.typePhone("+18293816408")
-      validData.typeSSN("078-05-1120")
-      validData.typeUserNameAndPassword("Qwerty10", "CZ40${8", "CZ40${8")
+      validData.typeZipCode("12345")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
+      validData.typeUserNameAndPassword("Spider10", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
-      cy.get('p.error')
+      cy.get('span[id="customer.lastName.errors"]')
         .should('contain.text', "An internal error has occurred and has been logged.")
     })
   });
