@@ -1,9 +1,9 @@
-  /// <reference types = "Cypress" />
+    /// <reference types = "Cypress" />
   import { validData } from "../../support/pages/validData";
 
 
   describe('Empty Last Name in the registration form', () => {
-    it.skip('ID 3.1', () => {
+    it('ID 3.1', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
       validData.typeFirstName("Denis")
@@ -11,8 +11,8 @@
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
       validData.typeZipCode("12345")
-      validData.typePhone("+18293816407")
-      validData.typeSSN("078-05-1120")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
       validData.typeUserNameAndPassword("Spider1", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
       cy.get('span[id="customer.lastName.errors"]')
@@ -21,7 +21,7 @@
   });
 
   describe('A space was entered in the Last Name field in the registration form', () => {
-    it.skip('ID 3.2', () => {
+    it('ID 3.2', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
       validData.typeFirstName("Denis")
@@ -30,8 +30,8 @@
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
       validData.typeZipCode("12345")
-      validData.typePhone("+18293816407")
-      validData.typeSSN("078-05-1120")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
       validData.typeUserNameAndPassword("Spider2", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
       cy.get('span[id="customer.lastName.errors"]')
@@ -40,7 +40,7 @@
   });
 
   describe('In the Last Name registration form, enter a word with a space in front ', () => {
-    it.skip('ID 3.3', () => {
+    it('ID 3.3', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
       validData.typeFirstName("Denis")
@@ -49,8 +49,8 @@
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
       validData.typeZipCode("12345")
-      validData.typePhone("+18293816407")
-      validData.typeSSN("078-05-1120")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
       validData.typeUserNameAndPassword("Spider3", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
       cy.get('span[id="customer.lastName.errors"]')
@@ -59,7 +59,7 @@
   });
 
   describe('In the Last Name registration form, enter a word with a space in the middle', () => {
-    it.skip('ID 3.4', () => {
+    it('ID 3.4', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
       validData.typeFirstName("Denis")
@@ -68,8 +68,8 @@
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
       validData.typeZipCode("12345")
-      validData.typePhone("+18293816407")
-      validData.typeSSN("078-05-1120")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
       validData.typeUserNameAndPassword("Spider4", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
       cy.get('span[id="customer.lastName.errors"]')
@@ -78,7 +78,7 @@
   });
 
   describe('In the Last Name registration form, enter a word with a space in the end', () => {
-    it.skip('ID 3.5', () => {
+    it('ID 3.5', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
       validData.typeFirstName("Denis")
@@ -87,8 +87,8 @@
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
       validData.typeZipCode("12345")
-      validData.typePhone("+18293816407")
-      validData.typeSSN("078-05-1120")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
       validData.typeUserNameAndPassword("Spider5", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
       cy.get('span[id="customer.lastName.errors"]')
@@ -97,7 +97,7 @@
   });
 
   describe('In the Last Name registration form, enter the numbers', () => {
-    it.skip('ID 3.6', () => {
+    it('ID 3.6', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
       validData.typeFirstName("Denis")
@@ -106,8 +106,8 @@
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
       validData.typeZipCode("12345")
-      validData.typePhone("+18293816407")
-      validData.typeSSN("078-05-1120")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
       validData.typeUserNameAndPassword("Spider6", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
       cy.get('span[id="customer.lastName.errors"]')
@@ -116,7 +116,7 @@
   });
 
   describe('In the Last Name registration form, enter the special characters', () => {
-    it.skip('ID 3.7', () => {
+    it('ID 3.7', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
       validData.typeFirstName("Denis")
@@ -125,8 +125,8 @@
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
       validData.typeZipCode("12345")
-      validData.typePhone("+18293816407")
-      validData.typeSSN("078-05-1120")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
       validData.typeUserNameAndPassword("Spider7", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
       cy.get('span[id="customer.lastName.errors"]')
@@ -135,7 +135,7 @@
   });
 
   describe('In the registration form, non-ASCII characters are entered in the Last Name field', () => {
-    it.skip('ID 3.8', () => {
+    it('ID 3.8', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
       validData.typeFirstName("Denis")
@@ -144,8 +144,8 @@
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
       validData.typeZipCode("12345")
-      validData.typePhone("+18293816407")
-      validData.typeSSN("078-05-1120")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
       validData.typeUserNameAndPassword("Spider8", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
       cy.get('span[id="customer.lastName.errors"]')
@@ -154,7 +154,7 @@
   });
 
   describe('In the registration form, in the Last Name field, symbols, numbers, letters and a space are entered', () => {
-    it.skip('ID 3.9', () => {
+    it('ID 3.9', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
       validData.typeFirstName("Denis")
@@ -163,8 +163,8 @@
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
       validData.typeZipCode("12345")
-      validData.typePhone("+18293816407")
-      validData.typeSSN("078-05-1120")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
       validData.typeUserNameAndPassword("Spider9", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
       cy.get('span[id="customer.lastName.errors"]')
@@ -173,7 +173,7 @@
   });
 
   describe('In the registration form in the field Last Name entered the word in Cyrillic', () => {
-    it.skip('ID 2.10', () => {
+    it('ID 2.10', () => {
       cy.visit('https://parabank.parasoft.com/parabank/index.htm').wait(1000)
       cy.get('[href^="register.htm"]').click().wait(1000)
       validData.typeFirstName("Denis")
@@ -182,8 +182,8 @@
       validData.typeCity("Kansas City")
       validData.typeState("Kansas")
       validData.typeZipCode("12345")
-      validData.typePhone("+18293816407")
-      validData.typeSSN("078-05-1120")
+      validData.typePhone("18293816407")
+      validData.typeSSN("078051120")
       validData.typeUserNameAndPassword("Spider10", "D}mH}#bhXX?ei1e8", "D}mH}#bhXX?ei1e8")
       cy.get('input[value="Register"]').click()
       cy.get('span[id="customer.lastName.errors"]')
