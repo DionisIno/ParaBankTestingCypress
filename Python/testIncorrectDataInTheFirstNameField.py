@@ -26,7 +26,7 @@ class TestIncorrectName(object):
         page.type_username_password_and_repeat('qwerty11111', 'CZ40${8', 'CZ40${8')
         page.button_register()
         message = browser.find_element(By.CSS_SELECTOR, 'span.error')
-        assert UnsuccessfulAnswer.empty_field(self) in message.text
+        assert UnsuccessfulAnswer.empty_field('First name') in message.text
 
 
     def test_incorrect_first_name_v2_2(self, browser):
