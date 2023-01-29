@@ -66,11 +66,11 @@ class BasePage(object):
         ssn = self.browser.find_element(*BasePageLocators.SSN_LINK)
         ssn.send_keys(self.ssn)
 
-    def type_username_password_and_repeat(self, un, passw, reppassw):
+    def type_username_password_and_repeat(self, username, password, repeat_password):
         # locators for the Password, Username and repeat Password fields
-        self.username = un
-        self.password = passw
-        self.repeat_password = reppassw
+        self.username = username
+        self.password = password
+        self.repeat_password = repeat_password
         username = self.browser.find_element(*BasePageLocators.USERNAME_LINK)
         username.send_keys(self.username)
         password = self.browser.find_element(*BasePageLocators.PASSWORD_LINK)
